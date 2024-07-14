@@ -1,0 +1,12 @@
+// Function to print the current window
+function printCurrentWindow() {
+    window.print();
+}
+function printCurrentWindow() {
+    window.print();
+}
+
+
+// Call the function to print when needed
+printCurrentWindow();
+

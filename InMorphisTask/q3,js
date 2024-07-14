@@ -1,0 +1,38 @@
+// Example code in q3.js
+function getCurrentDate() {
+    let currentDate = new Date();
+
+    let dd = currentDate.getDate();
+    let mm = currentDate.getMonth() + 1; // January is 0, so we add 1
+    let yyyy = currentDate.getFullYear();
+
+    // Ensure mm and dd are two digits
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+
+    // Choose your desired date format here
+    let dateFormat = 'mm-dd-yyyy'; // Change this to choose format: mm-dd-yyyy, mm/dd/yyyy, dd-mm-yyyy, dd/mm/yyyy
+
+    switch (dateFormat) {
+        case 'mm-dd-yyyy':
+            return mm + '-' + dd + '-' + yyyy;
+        case 'mm/dd/yyyy':
+            return mm + '/' + dd + '/' + yyyy;
+        case 'dd-mm-yyyy':
+            return dd + '-' + mm + '-' + yyyy;
+        case 'dd/mm/yyyy':
+            return dd + '/' + mm + '/' + yyyy;
+        default:
+            return 'Invalid date format specified';
+    }
+}
+
+// Output the current date in different formats
+console.log('Current date (mm-dd-yyyy):', getCurrentDate());
+console.log('Current date (mm/dd/yyyy):', getCurrentDate());
+console.log('Current date (dd-mm-yyyy):', getCurrentDate());
+console.log('Current date (dd/mm/yyyy):', getCurrentDate());
